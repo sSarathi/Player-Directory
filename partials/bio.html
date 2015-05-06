@@ -1,0 +1,11 @@
+<section class="artistinfo">
+	<div class="artist cf" ng-model="player">
+		<h1> {{player[whichIteam].name}}</h1>
+		<div class="info">
+			<h3>{{player[whichIteam].Point}}</h3>
+			<img ng-src="images/{{player[whichIteam].shortname}}.jpg" alt="Photos of{{player[whichIteam].name}}">
+			<div class="bio">{{player[whichIteam].bio}}</div>
+		</div>        
+	</div>
+	<a href="index.html">back to search</a>
+</section>

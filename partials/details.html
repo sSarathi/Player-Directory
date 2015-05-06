@@ -1,0 +1,43 @@
+<section class="artistinfo">
+	<div class="artist cf" ng-model="player">
+		<h1>Player Edit Section</h1>
+		<br>
+		<div class="info">
+			<div class="bio">
+
+				<form name="frm" ng-submit="addPlayer()">
+					Name:<br>
+					<input type="text" ng-model="Text_name" name="name" required ng-minlength="2">
+					<span ng-show="frm.name.$error.required"> !Required </span>
+					<span ng-show="frm.name.$error.minlength"> !too short </span>
+					<br>
+
+					Short name:<br>
+					<input type="text" ng-model="Text_shortname"name="shortname" required ng-minlength="2" ng-maxlength="10">
+					<span ng-show="frm.shortname.$error.required"> !Required </span>
+					<span ng-show="frm.shortname.$error.minlength"> !too short </span>
+					<span ng-show="frm.shortname.$error.maxlength"> !too long </span><br>
+
+					Position:<br>
+					<input type="text"ng-model="Text_point" name="point" required ng-minlength="7" ng-maxlength="20">
+					<span ng-show="frm.point.$error.required"> !Required </span>
+					<span ng-show="frm.point.$error.minlength"> !too short </span>
+					<span ng-show="frm.point.$error.maxlength"> !too long </span><br><br>
+
+					Bio </br>
+					<textarea ng-model="Text_bio" name="bio" rows="4" cols="50" required ng-minlength="100"autofocus>
+					</textarea>
+					</br>
+					<span ng-show="frm.bio.$error.required"> !Required </span></br>
+					<span ng-show="frm.bio.$error.minlength"> !too short </span></br>
+					</br>
+					
+					<input type="submit" ng-disabled="frm.$invalid" value="add">
+				</form> 
+
+				
+			</div>
+		</div>
+	</div>
+	<a href="index.html">back to search</a>
+</section>

@@ -1,0 +1,21 @@
+<section class="artistpage">
+    <div class="search"> 
+            <h1>Barcelona Directory</h1>
+            <a href="#/details"><h2>Edit Player</h2></a>
+            </br>
+            <label>Search</label>
+            <input ng-model="query" placeholder="Search for player" autofocus>
+    </div>
+   
+        <ul class="artistlist">
+            <li ng-animate="'animate'" class="artist cf"  ng-repeat="iteam in player| filter: query">
+
+                <img ng-src="images/{{iteam.shortname}}.jpg" alt="Photos of{{iteam.name}} ">
+                <div class="info">
+                   <a href="#/bio/{{player.indexOf(iteam)}}"> <h2>{{iteam.name}}</h2> </a> 
+                    <h3>Position: {{iteam.Point}}</h3>
+                    <a href="" ng-click="remove($index)">remove</a> 
+                </div>
+            </li>
+        </ul>
+</section>

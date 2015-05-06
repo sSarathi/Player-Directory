@@ -1,0 +1,40 @@
+<html ng-app="myApp">
+<head>
+    <title>Player Directory</title>
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="js/controller.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div class="main" ng-controller="MyController">
+        <ul class="artistlist">
+            <li class="artist cf" ng-repeat="iteam in player">
+                
+                <div class="info">
+                    <h2>{{iteam.name}}</h2>
+                    <h3>{{iteam.Point}}</h3>
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+            </li>
+
+
+
+
+
+        </ul>   
+
+
+    </div>
+
+</body>
+</html>
